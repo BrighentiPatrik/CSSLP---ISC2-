@@ -1,2 +1,2 @@
-# CSSLP---ISC2-
+# CSSLP---ISC2
 CSSLP study material

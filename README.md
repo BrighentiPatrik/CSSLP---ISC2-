@@ -100,6 +100,11 @@ The information system security policy decomposition for auditing activities sho
 &nbsp;
  _Syslog_: is an Internet Engineering Task Force (IETF) approved protocol for log messaging. It was designed and built around UNIX and provides a UNIX-centric format for sending log information across an internet Protocol (IP) network.
 
+## OpenID vs OAuth
+
+ _OpenID_: was created for federated authentication, specifically to allow a third party to authenticate your users for you by using accounts that users already have. The protocol enables websites or applications (consumer) to grant access to their own applications by using another service or application (provider) for authentication.
+ 
+&nbsp;
 ```mermaid
 ---
 title: FederationID
@@ -110,10 +115,27 @@ config:
     User Requesting Party->>Relying Party(RP): 
     Relying Party(RP)<<->> Identity Provider(IdP): Trust Relationship  
 ```
+&nbsp;
+ _OAuth_: was created to eliminate the need for users to share their passwords with thid-party applications. The OAuth protocol enables websites or applications (consumers) to access protected resources from a web service (service provider) via an application programming interface (API), without requiring users to disclose their service provider credentials to the costumers.
+ &nbsp;
 
+ Both OpenID (authentication) and OAuth (authorization) accomplish many of the smae things. Each protocol provides a different set of features, which are required by their primary objective, but essentially, they are interchangable.
 
+&nbsp;
+```mermaid
+---
+title: OpenID vs OAuth
+config:
+  mirrorActors: false
+---
+graph TB
+    A(OpenID)
+    B(OAuth)
+    A -- Intersection --> C((A ∩ B))
+    B -- Intersection --> C
+```
 
-
+![Diagramma di Venn](C:\Users\brigh\git\CSSLP---ISC2-\Resources\OpenIDvsOauth.drawio.png)
 
 
 

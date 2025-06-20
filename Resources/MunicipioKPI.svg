@@ -1,0 +1,27 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tetto -->
+  <polygon points="150,10 270,70 30,70" fill="#4a90e2"></polygon>
+  <rect x="30" y="70" width="240" height="20" fill="#1c64b3"></rect>
+
+  <!-- Colonne -->
+  <!-- Colonna 1 -->
+  <rect x="50" y="90" width="30" height="120" fill="#94c0f3"></rect>
+  <!-- Colonna 2 -->
+  <rect x="100" y="90" width="30" height="120" fill="#94c0f3"></rect>
+  <!-- Colonna 3 -->
+  <rect x="150" y="90" width="30" height="120" fill="#94c0f3"></rect>
+  <!-- Colonna 4 -->
+  <rect x="200" y="90" width="30" height="120" fill="#94c0f3"></rect>
+
+  <!-- Base -->
+  <rect x="20" y="210" width="260" height="20" fill="#1c64b3"></rect>
+  <rect x="0" y="230" width="300" height="20" fill="#1c64b3"></rect>
+
+  <!-- Testi -->
+  <text x="150" y="60" text-anchor="middle" fill="black" font-size="14" font-family="Arial">X.509 PKI</text>
+
+  <text x="65" y="180" transform="rotate(-90 65,180)" text-anchor="middle" fill="black" font-size="12" font-family="Arial">Crypto &amp; Tech</text>
+  <text x="115" y="180" transform="rotate(-90 115,180)" text-anchor="middle" fill="black" font-size="12" font-family="Arial">Policies</text>
+  <text x="165" y="180" transform="rotate(-90 165,180)" text-anchor="middle" fill="black" font-size="12" font-family="Arial">Processes</text>
+  <text x="215" y="180" transform="rotate(-90 215,180)" text-anchor="middle" fill="black" font-size="12" font-family="Arial">Audits</text>
+</svg>

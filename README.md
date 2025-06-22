@@ -161,7 +161,7 @@ _**Economy of Mechanism**_
 The KISS (Keep-It-Simple-Stupid) principle tells us to eliminate those that we don't need. The general rule of thumb should be to always eliminate all nonessential services and protocol.
 
 _**Complete Mediation**_
-This principle states that when a sunject's authorization is verified with respect to an object and an actions, this verification occurs every time the subject requests access to an object.
+This principle states that when a subject's authorization is verified with respect to an object and an actions, this verification occurs every time the subject requests access to an object.
 
 _**Open Design**_
 This principles state that the security of a system must be indipendent from the secrecy of the design. Like the modern criptographic alghoritms that the security depends upon the secrecy of the key instead of the secrecy of the alghoritm.
@@ -220,7 +220,7 @@ Authenticity --> HMAC, Message authentication codes, authenticated encryption
 Non-Repudiation --> Digital Signature
 
 
-
+***
 ### Security Model
 
 _**Access Control Model**_:
@@ -256,9 +256,9 @@ XACML - eXtensible Access Control Markup Language is a standard that implements 
      - _***property (no-write-down)**_: A subject can write to an object only if its security classification is less than or equal to the object's security classification.
 &nbsp;
 
-- **Take-Grant Model**: is buil upon graph theory. 
+- **Take-Grant Model**: is built upon graph theory. 
  &nbsp;![Diagramma di Venn](Resources\TakeGrantModel.png)
-
+***
 
 ### Integrity Model
 Integrity-based models are designed to protect the integrity of the information. For some types of information, integrity can be as importants as, or even more important than, confidentiality. Public information, such as stock prices, is available to all, but the correctness of their valuen is crucial, leading to the need to ensure integrity.
@@ -267,6 +267,72 @@ Integrity-based models are designed to protect the integrity of the information.
 It has two principles:
      - **low-water-markup-policy (no-write-up)**: This policy prevents subjects from writing to objects of a higher integrity level. 
      - **integrity\* property (no-read-down)**: A subject cannot read an object at a lower integrity level.
+
+  In this model, the level of trust you can place in data cannot be higher than the level of subjeect creating the new data object.
+&nbsp;
+
+- **Clark-Wilson Model**: use _transaction_ as base of its rules. 
+It defines two levels of _data_ based of they integrity constraint:
+     - **CDI - Constrained Data Items**: which is subject to integrity control.
+     - **UDI - Unconstrained Data Items**: which is NOT subject to integrity control.
+  &nbsp;
+  
+  Changes to the data are performed by two types of _process_:
+     - **IVP - Integrity Verification Processes**: ensure that CDI meets integrity constraints (to ensure the system is in a valid state)
+     - **TP - Transformation Processes**: change the state of data from a valid one to another.
+  &nbsp;
+  > The Clark-Wilson model is a security model that focuses on ==data integrity rather than confidentiality==. It is particularly suited for commercial and financial environments, where it is essential to ensure that data is not altered in an unauthorized manner.
+The Clark-Wilson model is designed specifically to prevent anyone from modifying data directly in the database.
+In a system that follows the Clark-Wilson model:
+-Direct SQL privileges on the DB are removed for users and developers.
+-The only operations allowed are those via APIs, software, or approved procedures.
+-There is control at the operating system, DB, and application levels to enforce this architecture.
+-Manual changes are detected and reported as integrity violations.
+
+
+
+&nbsp;
+- **Brewer-Nassh Model (Chinese Wall)**: is a context-based access control model designed to handle situations where avoiding conflicts of interest is critical.
+It is a dynamic security model that changes a user's access permissions based on the data they have already accessed. It is used for avoid conflicts of interest between different companies or customers in the same system.
+&nbsp;
+This is especially useful in environments such as:
+  - Law firms
+  - Consulting firms
+  - Financial firms
+  &nbsp;
+  
+  📋 Key principles
+     - Dynamically controlled access
+     - Access to certain data is blocked or allowed based on the user's past access.
+     - Information is divided into conflict of interest classes (COI).
+     
+     &nbsp;
+     If a user logs into a company in a COI, they can no longer access data from other companies in the same COI.
+     Rights change over time: a user can initially access everything, but after the first login, constraints are activated.
+
+  | Modello           | Focus principale           | Tipo di controllo |
+  | ----------------- | -------------------------- | ----------------- |
+  | **Bell-LaPadula** | Confidenzialità            | Statico           |
+  | **Biba**          | Integrità                  | Statico           |
+  | **Clark-Wilson**  | Integrità + separazione    | Statico           |
+  | **Brewer-Nash**   | **Conflitti di interesse** | **Dinamico**      |
+
+
+***
+**Data Flow Diagrams - DFD**: are specifically designed tyo document the storage, movement and processing of data in a system.
+
+**Use Case Model**: examines the system from a functional prospective model. Use cases are constructed to demonstrate how the system processes data for each of its defined functions. Use cases can be consteructed for both normal and abnormal (misuse cases) to facilitate the full description of how the system operates.
+
+**Assurance Models**
+The Committee on National Security Systems has defined ==software assurance== as the "level of confidence that software is free from vulnerabilities, either intentionally designed into the software or accidentally inserted at any time during its lifecycle, and that the software functions in the intended manner.
+
+
+**Operational Model of Security**
+| Prevention     | Detection                    | Response                |
+| -------------- | ---------------------------- | ----------------------- |
+| Access Control | Audit Logs                   | Backups                 |
+| Firewalls      | Inbtrusion detection Systems | Incident Response teams |
+| Encryption     | Honeypots                    | Computer Forensics      |
 
 
 

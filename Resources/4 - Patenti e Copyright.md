@@ -84,10 +84,3 @@ Molti software usano **una combinazione** di strumenti:
 
 ---
 
-Se vuoi posso:
-
-- Preparare un'infografica.
-- Scrivere un paragrafo per uso legale o didattico.
-- Generare esempi pratici con software famosi (es. Adobe, Oracle, Red Hat).
-
-Fammi sapere!

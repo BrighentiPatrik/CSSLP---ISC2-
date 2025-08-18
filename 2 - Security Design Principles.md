@@ -52,13 +52,13 @@ A single point of failure is any aspect of a system that, if it fails, means the
 
 A trusted pki is used to implement all the fundamental security goals: Confidentiality,Integrity,Authenticity and Non-Repudiation.
 
-![Diagramma di Venn](Resources/CIA+.png?raw=true)
+![Diagramma di Venn](Resources/CIA+.PNG?raw=true)
 
-![Diagramma di Venn](Resources/MITM.png?raw=true)
+![Diagramma di Venn](Resources/MITM.PNG?raw=true)
 
-![Diagramma di Venn](Resources/PKIEntities.png?raw=true)
+![Diagramma di Venn](Resources/PKIEntities.PNG?raw=true)
 
-![Diagramma di Venn](Resources/CErtificateSchema.png?raw=true)
+![Diagramma di Venn](Resources/CErtificateSchema.PNG?raw=true)
 la signature è una cifratura (tramite private-key della CA) dell'hash del certificato
 
 - **End-entities**: User or subject of X.509 certificate. Can be natural persons (e.g., Alice), legal persons (e.g., IBM), machines or applications and services (e.g., IoT devices, web servers)

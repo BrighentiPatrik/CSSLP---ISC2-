@@ -13,7 +13,7 @@ Separation of Duties ensure that for any given task, more than one individual ne
 _**Defense in Depth**_ **&rarr;** **_Layered Security_**
 For the layers to be diverse, they should be dissimilar in nature so that if an adversary makes it past one layer, another layer may still be affective in maintaining the system in a secure state. Defense in Depth provide security against many attack vector.
 
-![Diagramma di Venn](Resources\DefenseInDepth.svg?raw=true)
+![Diagramma di Venn](Resources/DefenseInDepth.svg?raw=true)
 
 _**Fail-Safe**_
 The Fail-Safe design principle is that when a system experiences a failure, it should fail to a safe state. One form of implementation is to use the concept of __explicit deny__. Any function that is not specifically authorized is denied by default.
@@ -52,13 +52,13 @@ A single point of failure is any aspect of a system that, if it fails, means the
 
 A trusted pki is used to implement all the fundamental security goals: Confidentiality,Integrity,Authenticity and Non-Repudiation.
 
-![Diagramma di Venn](Resources\CIA+.png?raw=true)
+![Diagramma di Venn](Resources/CIA+.png?raw=true)
 
-![Diagramma di Venn](Resources\MITM.png?raw=true)
+![Diagramma di Venn](Resources/MITM.png?raw=true)
 
-![Diagramma di Venn](Resources\PKIEntities.png?raw=true)
+![Diagramma di Venn](Resources/PKIEntities.png?raw=true)
 
-![Diagramma di Venn](Resources\CErtificateSchema.png?raw=true)
+![Diagramma di Venn](Resources/CErtificateSchema.png?raw=true)
 la signature è una cifratura (tramite private-key della CA) dell'hash del certificato
 
 - **End-entities**: User or subject of X.509 certificate. Can be natural persons (e.g., Alice), legal persons (e.g., IBM), machines or applications and services (e.g., IoT devices, web servers)

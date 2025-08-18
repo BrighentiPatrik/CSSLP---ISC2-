@@ -118,7 +118,7 @@ XACML - eXtensible Access Control Markup Language is a standard that implements 
 &nbsp;
 
 - **Take-Grant Model**: is built upon graph theory. 
- &nbsp;![Diagramma di Venn](Resources\TakeGrantModel.png?raw=true)
+ &nbsp;![Diagramma di Venn](Resources/TakeGrantModel.png?raw=true)
 ***
 
 ### Integrity Model

@@ -117,7 +117,7 @@ config:
 
  Both OpenID (authentication) and OAuth (authorization) accomplish many of the smae things. Each protocol provides a different set of features, which are required by their primary objective, but essentially, they are interchangable.
 
-![Diagramma di Venn](Resources\OpenIDvsOauth.svg?raw=true)
+![Diagramma di Venn](Resources/OpenIDvsOauth.svg?raw=true)
 
 
 &nbsp;

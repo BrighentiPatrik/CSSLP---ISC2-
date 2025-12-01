@@ -11,4 +11,3 @@ Covers the main knowledge to create and manage the necessary process to build a 
     - [Patenti e Copyright](./4%20-%20Patenti%20e%20Copyright.md)
 - [Chapter 5 - Misuse and Abuse Cases](./5%20-%20Misuse%20and%20Abuse%20Cases.md)
 
-

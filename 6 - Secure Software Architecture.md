@@ -90,3 +90,58 @@ The purpose of the validation phase is to assess the quality of the threats and 
 ---
 
 ### Attack Surface Evaluation
+The attack surface of software is the code within the system that can be accessed by unauthorized parties. This is not just the code itself bu also can include a wide range of resources associated with the code, including user input fields, protocols, interfaces, resource files, and services.
+
+One measure of the attack surface is the number or the weigthed number of accessible items. The more elements that can be attacked, the greater the risk. The attack surface of the software does not represent the quality of the code, it does not mean where are flaws; it is merely a measure of how many features/items are available for attack.
+
+A long-standing security practice is not to enable functionality that is not used or needed. By turning off uneccessary functionality, there is a smaller attack surface, and there are fewer security risks. Attack surface evaluation is a means of measuring and determining the risks associated with the implications of design and development.
+
+### Attack Surface Measurement
+To understand a product's attack surface, you need to measure the number of ways it can be "accessed".
+
+ - Opens Sockets
+ - Open RPC endpoints
+ - Open named pipes
+ - Services
+ - Services running by defaults
+ - Services runnin as SYSTEM
+ - Active web handlers (ASP files, HTR files, and so on)
+ - Active Internet Server Application Programming Interface (ISAPI) filters
+ - Dynamic webpages (ASP ans such)
+ - Executable virtual directories
+ - Enabled accounts
+ - Enabled accounts in admin group
+ - Null sessions to pipes and shares
+ - Guest account enabled
+ - Weak ACLs in the file system
+ - Weak ACL in the registry
+ - Weak ACL on shares
+
+Another source of information is in the history of known vulnerabilities associated with previous developments. Determining the root cause of old vulnerabilities is good for fixing them and preventing future occurrences, and it is also valuable informatyion that can be used in determining the attack surface.
+The items on the list are not neccesesary vulnerabilities, but they are items that attackers will attempt to compromise.
+Different elements may have different scoring values, as a service running as a system is riskier than a nonprivileged service. Services that are run by default are riskier than those on the same level running only on the demand.
+
+### Attack Surface Measurement
+
+This can done by turning off elements not needed by most users. Services that are used can be on or off bu default, only on when needed, run as system, or without privilege. The lower the priviolege, the less a service is running, so these factors can reduce the attack surface. Some elements may be off for most users, yet on for specific users under appropiate circumstances. Minimization is a form of **least privilege**, and the application of it works in the same manner. If the application is network aware, restricting access to a set number of endpoints or a restricted IP range reduces the surface.
+
+As with all changes, the earlier in the development process a change is made, the lesser the impact will be to surrounding elements. Attack surface minimization should be considered with design efforts.
+
+### Threat Intelligence
+
+Threat Intelligence is the actionabale information about malicious actors, their tools, infrastructure and methods. Threat Intelliogence combined with the concepty of kill chain (the attacker's most likely path) means you can prioritize actions against most meaningful threats. The vast majority of attacks on software upon a ten vulnerabilities (97% of attacks against companies in 2014).
+
+As developers include third-party, open source, and commercial libraries into their projects, these resources must be watched for newly discovered vulnerabilities. Understanding what is beign attacked, and how, is important infromation for the development team.
+
+### Threat Hunting &nbsp;&nbsp; ![White Paper](Resources\38710.pdf)
+
+Threat hunting is an interactive process of proactively searching out threats inside the network. One of the most effective is based on creating a hypothesis and then examining that hypothesis. A typicqlal hypothesis woul be something like "an adversary is using stolen credentials to mimic authorized users during nonworking hours".
+&nbsp;
+
+---
+
+## Security Architecture
+
+The new system is designed to meet requirements and then joins the other systems in the enterprise. Cross-integration between architectures allows data reuse and significantly increases the overall utility of the enterprise architecure as a whole. Getting the true benefit of a security architecture requires that it be a planned element to support the desired security outcomes. This is important in both new greenfield projects and updates and exapansions of existing systems.
+
+
